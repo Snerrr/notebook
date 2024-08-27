@@ -3,10 +3,12 @@ from interface.itask import Itask
 
 class Notebook(Inotebooke):
   def __init__(self, tasks : list[Itask]):
-    self.tasks = tasks
+    if len(tasks) == 0:
+      self.tasks == []
+    else: self.tasks = tasks
   def append_task(self, task: Itask):
-    pass
+    self.tasks.append(task)
   def get_tasks(self) -> list:
-    pass
+    return self.tasks
 
   
