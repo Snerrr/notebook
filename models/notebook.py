@@ -2,10 +2,8 @@ from interface.inotebook import Inotebooke
 from interface.itask import Itask
 
 class Notebook(Inotebooke):
-  def __init__(self, tasks : list[Itask]):
-    if len(tasks) == 0:
-      self.tasks == []
-    else: self.tasks = tasks
+  def __init__(self, tasks : list[Itask] = []):
+    self.tasks = tasks
   def append_task(self, task: Itask):
     self.tasks.append(task)
   def get_tasks(self) -> list:

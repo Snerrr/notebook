@@ -24,3 +24,4 @@ class Presenter():
         self.create_task()
       if choise == 3:
         print(text.menu_close)
+        break
